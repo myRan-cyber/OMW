@@ -1,0 +1,17 @@
+\paragraph{对称性验证}  
+对任意 \(x, y \in \mathbb{R}^2\)：
+\[
+\langle x, y \rangle = 2x_1y_1 + 3x_2y_1 + 3x_1y_2 + 5x_2y_2 = \langle y, x \rangle
+\]
+
+\paragraph{线性性验证}  
+对任意 \(\alpha, \beta \in \mathbb{R}\) 和 \(x, y, z \in \mathbb{R}^2\)：
+\[
+\langle \alpha x + \beta y, z \rangle = 2(\alpha x_1 + \beta y_1)z_1 + 3(\alpha x_2 + \beta y_2)z_1 + \cdots = \alpha \langle x, z \rangle + \beta \langle y, z \rangle
+\]
+
+\paragraph{正定性验证}  
+对任意非零向量 \(x \neq 0\)：
+\[
+\langle x, x \rangle = 2x_1^2 + 6x_1x_2 + 5x_2^2 = (x_1 + 3x_2)^2 + x_2^2 > 0
+\]

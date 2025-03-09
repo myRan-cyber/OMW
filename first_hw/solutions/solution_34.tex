@@ -1,0 +1,18 @@
+\paragraph{Part (a)}  
+由迹的线性性：
+\[
+d\,\text{tr}(X) = \text{tr}(dX) = \sum_{i,j} \delta_{ij} dX_{ij} \implies \frac{\partial \text{tr}(X)}{\partial X_{ij}} = \delta_{ij}
+\]
+故梯度矩阵为 \(I\)。
+
+\paragraph{Part (b)}  
+按乘积微分法则：
+\[
+d(XY)_{ij} = \sum_k (dX_{ik}Y_{kj} + X_{ik}dY_{kj}) \implies d(XY) = (dX)Y + X(dY)
+\]
+
+\paragraph{Part (c)}  
+由转置定义：
+\[
+d(X^T)_{ij} = dX_{ji} = (dX)^T_{ij}
+\]

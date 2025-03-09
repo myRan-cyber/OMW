@@ -1,0 +1,29 @@
+\paragraph{Step1: 构造过渡矩阵}  
+基变换矩阵 \(T\) 满足 \(E = E'T\)，其中：
+\[
+T = \begin{bmatrix}
+2 & 2 & 3 \\
+1 & -1 & 0 \\
+-1 & 2 & 1
+\end{bmatrix}
+\]
+
+\paragraph{Step2: 计算逆矩阵}  
+通过高斯消元法求得：
+\[
+T^{-1} = \dfrac{1}{7} \begin{bmatrix}
+1 & 5 & 3 \\
+1 & -5 & -3 \\
+3 & 4 & 4
+\end{bmatrix}
+\]
+
+\paragraph{Step3: 基变换公式}  
+新基下矩阵为：
+\[
+A' = T^{-1}AT = \begin{bmatrix}
+2 & -\dfrac{9}{7} & \dfrac{3}{7} \\
+0 & 1 & -\dfrac{11}{7} \\
+0 & 0 & 1
+\end{bmatrix}
+\]

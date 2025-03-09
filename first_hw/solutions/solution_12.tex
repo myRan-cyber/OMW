@@ -1,0 +1,13 @@
+\paragraph{定义验证}  
+根据从属范数定义：
+\[
+\|A\|_\infty = \max_{\|x\|_\infty=1} \|Ax\|_\infty
+\]
+设 \(x\) 满足 \(\max_i |x_i| = 1\)，则：
+\[
+\|Ax\|_\infty = \max_i \left| \sum_{k=1}^n a_{ik}x_k \right| \leq \max_i \sum_{k=1}^n |a_{ik}| \cdot |x_k| \leq \max_i \sum_{k=1}^n |a_{ik}|
+\]
+当取 \(x\) 为第 \(j\) 个基向量时达到最大值，故：
+\[
+\|A\|_\infty = \max_i \sum_{k=1}^n |a_{ik}|
+\]

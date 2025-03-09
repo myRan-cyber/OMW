@@ -1,0 +1,15 @@
+\paragraph{Part (a)}  
+展开目标函数：
+\[
+f(x) = \sum_{i=1}^m \left( \sum_{j=1}^n a_{ij}x_j - y_i \right)^2
+\]
+对 \(x_k\) 求导：
+\[
+\frac{\partial f}{\partial x_k} = 2\sum_{i=1}^m a_{ik} \left( \sum_{j=1}^n a_{ij}x_j - y_i \right)
+\]
+
+\paragraph{Part (b)}  
+矩阵形式导数：
+\[
+\frac{\partial f}{\partial x} = 2A^T(Ax - y)
+\]

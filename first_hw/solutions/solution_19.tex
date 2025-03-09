@@ -1,0 +1,12 @@
+\paragraph{Part (a)}  
+由谱定理，存在正交矩阵 \(U\) 使得 \(Q = U\Lambda U^T\)。令 \(y = U^T x\)，则：
+\[
+x^T Qx = y^T \Lambda y = \sum_{i=1}^n \lambda_i y_i^2 \leq \lambda_1 \|y\|^2 = \lambda_1 \|x\|^2
+\]
+当 \(y = e_1\) 时取等，故 \(\lambda_1 = \max_{\|x\|=1} x^T Qx\)。
+
+\paragraph{Part (b)}  
+由 \(y^T \Lambda y \geq \lambda_n \|y\|^2\) 且 \(\|y\| = \|x\|\)，得：
+\[
+\lambda_n \|x\|^2 \leq x^T Qx \leq \lambda_1 \|x\|^2
+\]

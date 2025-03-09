@@ -1,0 +1,25 @@
+\paragraph{Part (a)}  
+矩阵形式：
+\[
+Q = \begin{bmatrix}
+3 & 0 & 1 \\
+0 & 4 & 0 \\
+1 & 0 & 3
+\end{bmatrix}
+\]
+通过正交变换得标准型：
+\[
+f = 2y_1^2 + 4y_2^2 + 4y_3^2
+\]
+
+\paragraph{Part (b)}  
+最小特征值为2，故：
+\[
+\min_x \frac{f(x)}{x^T x} = \lambda_{\min} = 2
+\]
+
+\paragraph{Part (c)}  
+标准化后方程为 \( 2y_1^2 + 4y_2^2 + 4y_3^2 = 1 \)，投影到三维空间为椭球，二维截面为椭圆，轴长比 \( \sqrt{4/2} : 1 = \sqrt{2} : 1 \)。
+
+\paragraph{Part (d)}  
+Hessian矩阵 \( \nabla^2 f = 2Q \)，其特征值比为 \( 4:2 \)，条件数 \( \kappa = 2 \)。

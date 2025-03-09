@@ -1,0 +1,15 @@
+\paragraph{Part (a)}  
+展开目标函数：
+\[
+f(x) = \frac{1}{4} \text{tr}((A - xx^T)^T(A - xx^T))
+\]
+对 \(x_k\) 求导：
+\[
+\frac{\partial f}{\partial x_k} = -\sum_{i=1}^n (A_{ik} - x_i x_k)x_i
+\]
+
+\paragraph{Part (b)}  
+整体梯度：
+\[
+\frac{\partial f}{\partial x} = -(A - xx^T)x
+\]

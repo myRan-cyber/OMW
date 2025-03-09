@@ -1,0 +1,27 @@
+\paragraph{Part (a)}  
+设 \(X\) 可逆，利用行列式微分公式：
+\[
+d\det(X) = \det(X) \cdot \text{tr}(X^{-1} dX)
+\]
+故：
+\[
+\frac{\partial \det(X)}{\partial X_{ij}} = \det(X) \cdot (X^{-T})_{ij}
+\]
+即：
+\[
+\frac{\partial \det(X)}{\partial X} = \det(X) X^{-T}
+\]
+
+\paragraph{Part (b)}  
+对恒等式 \(Y Y^{-1} = I\) 两边求导：
+\[
+dY \cdot Y^{-1} + Y \cdot d(Y^{-1}) = 0
+\]
+解得：
+\[
+d(Y^{-1}) = -Y^{-1} dY \cdot Y^{-1}
+\]
+即：
+\[
+\frac{\partial Y^{-1}}{\partial x} = -Y^{-1} \frac{\partial Y}{\partial x} Y^{-1}
+\]

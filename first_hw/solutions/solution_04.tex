@@ -1,0 +1,43 @@
+\paragraph{Part (a)}  
+新基向量在原基下的坐标为：
+\[
+\begin{cases}
+e_1' = e_1 + 3e_2 - 4e_3 \\
+e_2' = 2e_1 - e_2 + 5e_3 \\
+e_3' = 4e_1 + 5e_2 + 3e_3
+\end{cases}
+\]
+变换矩阵 \(T\) 的列由新基向量的坐标组成：
+\[
+T = \begin{bmatrix}
+1 & 2 & 4 \\
+3 & -1 & 5 \\
+-4 & 5 & 3
+\end{bmatrix}
+\]
+
+\paragraph{Part (b)}  
+原基向量在新基下的坐标为：
+\[
+\begin{cases}
+e_1 = e_1' + e_2' + 3e_3' \\
+e_2 = 2e_1' - e_2' + 4e_3' \\
+e_3 = 3e_1' + 5e_3'
+\end{cases}
+\]
+构造过渡矩阵 \(S\)：
+\[
+S = \begin{bmatrix}
+1 & 2 & 3 \\
+1 & -1 & 0 \\
+3 & 4 & 5
+\end{bmatrix}
+\]
+通过高斯消元法求逆矩阵 \(T = S^{-1}\)：
+\[
+T = \frac{1}{7} \begin{bmatrix}
+-5 & 2 & 3 \\
+5 & -4 & -3 \\
+-1 & 2 & 1
+\end{bmatrix}
+\]

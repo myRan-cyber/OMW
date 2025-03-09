@@ -1,0 +1,20 @@
+\paragraph{必要性证明}  
+设 \(Q\) 正定，则对任意非零向量 \(x\) 有：
+\[
+x^T Qx > 0
+\]
+取 \(x\) 为特征向量 \(v_i\)，则：
+\[
+v_i^T Qv_i = \lambda_i v_i^T v_i > 0 \implies \lambda_i > 0
+\]
+
+\paragraph{充分性证明}  
+若 \(Q\) 特征值全正，由谱分解定理：
+\[
+Q = U\Lambda U^T
+\]
+对任意非零向量 \(x\)：
+\[
+x^T Qx = x^T U\Lambda U^T x = y^T \Lambda y = \sum \lambda_i y_i^2 > 0
+\]
+其中 \(y = U^T x \neq 0\)。半正定情形同理可证。
