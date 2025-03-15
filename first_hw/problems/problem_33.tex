@@ -1,10 +1,14 @@
-\begin{example}[二次型分析]
-    二次型 \( f(x) = 3x_1^2 + 4x_2^2 + 3x_3^2 + 2x_1x_3 \)。  
-    a. 写为矩阵形式并求标准型；  
-    b. 证明 \( \min_x \frac{f(x)}{x^T x} = 2 \)；  
-    c. 证明 \( \{x \in \mathbb{R}^3 \mid f(x) = 1\} \) 是椭圆，求轴长比；  
-    d. 计算 \( \nabla^2 f(x) \) 的条件数。
+\begin{example}
+    给定二次型 \( f(x) = 3x_1^2 + 4x_2^2 + 3x_3^2 + 2x_1x_3 \)，完成以下问题：
+
+    a. 将此二次型写成矩阵-向量形式，并求其标准型；
+    
+    b. 证明：\( \min_{x \neq 0} \frac{f(x)}{\|x\|^2} = 2 \)；
+    
+    c. 证明集合 \(\{x \in \mathbb{R}^3 \mid f(x) = 1\}\) 是一个椭球，并计算其长轴与短轴之比；
+    
+    d. 计算 \(\nabla^2 f(x)\) 的条件数。
     \end{example}
     
-    \subsection*{解答过程}
+    \subsection*{Ans.}
     \input{solutions/solution_33}

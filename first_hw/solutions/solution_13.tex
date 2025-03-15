@@ -1,15 +1,33 @@
-\paragraph{Part (a)}  
-展开目标函数：
+\paragraph{Part (a)：逐分量梯度计算}  
+展开平方范数：
 \[
-f(x) = \sum_{i=1}^m \left( \sum_{j=1}^n a_{ij}x_j - y_i \right)^2
+f(\bm{x}) = \sum_{i=1}^m \left( \sum_{j=1}^n A_{ij}x_j - y_i \right)^2.
 \]
-对 \(x_k\) 求导：
+对 \( x_k \) 求偏导：
 \[
-\frac{\partial f}{\partial x_k} = 2\sum_{i=1}^m a_{ik} \left( \sum_{j=1}^n a_{ij}x_j - y_i \right)
+\frac{\partial f}{\partial x_k} = 2 \sum_{i=1}^m A_{ik} \left( \sum_{j=1}^n A_{ij}x_j - y_i \right).
 \]
 
-\paragraph{Part (b)}  
-矩阵形式导数：
 \[
-\frac{\partial f}{\partial x} = 2A^T(Ax - y)
+\frac{\partial f}{\partial x_k} = 2 \left[ A^\top (A\bm{x} - \bm{y}) \right]_k.
+\]
+
+\[
+\boxed{\nabla f(\bm{x}) = 2A^\top (A\bm{x} - \bm{y})}.
+\]
+
+\paragraph{Part (b)：整体梯度计算}  
+将 \( f(\bm{x}) \) 展开平方范数：
+\[
+f(\bm{x}) = (A\bm{x} - \bm{y})^\top (A\bm{x} - \bm{y}) = \bm{x}^\top A^\top A\bm{x} - 2\bm{y}^\top A\bm{x} + \bm{y}^\top \bm{y}.
+\]
+对 \( \bm{x} \) 求梯度：
+\begin{align*}
+\frac{\partial}{\partial \bm{x}} (\bm{x}^\top A^\top A\bm{x}) &= 2A^\top A\bm{x}, \\
+\frac{\partial}{\partial \bm{x}} (-2\bm{y}^\top A\bm{x}) &= -2A^\top \bm{y}, \\
+\frac{\partial}{\partial \bm{x}} (\bm{y}^\top \bm{y}) &= \bm{0}.
+\end{align*}
+得：
+\[
+\boxed{\nabla f(\bm{x}) = 2A^\top (A\bm{x} - \bm{y})}.
 \]

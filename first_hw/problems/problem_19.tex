@@ -1,8 +1,21 @@
-\begin{example}[二次型极值]
-    考虑二次型 \(f(x) = x^T Qx\)，证明：  
-    a. \(\lambda_1 = \max_{\|x\|=1} x^T Qx = \max_{x \neq 0} \frac{x^T Qx}{x^T x}\)  
-    b. \(\lambda_n \|x\|^2 \leq x^T Qx \leq \lambda_1 \|x\|^2\)
+\begin{example}
+    考虑二次型 \( f(x) = x^\top Qx \)，其中 \( x \in \mathbb{R}^n \)，\( Q \in \mathbb{R}^{n \times n} \)，且 \( Q \) 的特征值分解为  
+    \[
+    Q = U\Lambda U^\top,
+    \]
+    其中 \( U \) 为正交矩阵，特征值为 \( \lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n \geq 0 \)。
+
+    a. 证明：
+    \[
+    \lambda_1 = \max_{\|x\|=1} x^\top Qx = \max_{x \neq 0} \frac{x^\top Qx}{x^\top x}.
+    \]
+
+    b. 证明：对任意 \( x \in \mathbb{R}^n \)，\( x \neq 0 \)，有
+    \[
+    \lambda_n \|x\|^2 \leq x^\top Qx \leq \lambda_1 \|x\|^2.
+    \]
     \end{example}
+
     
-    \subsection*{解答过程}
+    \subsection*{Ans.}
     \input{solutions/solution_19}

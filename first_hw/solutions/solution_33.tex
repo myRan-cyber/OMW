@@ -1,25 +1,41 @@
-\paragraph{Part (a)}  
-矩阵形式：
+\paragraph{Part (a)：}  
+将二次型写成 \( f(x) = x^\top Qx \)，其中 \( Q \) 为：
 \[
-Q = \begin{bmatrix}
+Q = \begin{pmatrix}
 3 & 0 & 1 \\
 0 & 4 & 0 \\
-1 & 0 & 3
-\end{bmatrix}
+1 & 0 & 3 \\
+\end{pmatrix}.
 \]
-通过正交变换得标准型：
+对 \( Q \) 特征分解， \( \det(Q - \lambda I) = 0 \)，得：
 \[
-f = 2y_1^2 + 4y_2^2 + 4y_3^2
+\lambda_1 = 4 \ (\text{二重根}), \quad \lambda_2 = 2.
 \]
-
-\paragraph{Part (b)}  
-最小特征值为2，故：
+通过 \( x = Uy \)，二次型化为标准型：
 \[
-\min_x \frac{f(x)}{x^T x} = \lambda_{\min} = 2
+\boxed{f(x) = 4y_1^2 + 4y_2^2 + 2y_3^2}.
 \]
 
-\paragraph{Part (c)}  
-标准化后方程为 \( 2y_1^2 + 4y_2^2 + 4y_3^2 = 1 \)，投影到三维空间为椭球，二维截面为椭圆，轴长比 \( \sqrt{4/2} : 1 = \sqrt{2} : 1 \)。
+\paragraph{Part (b)：}  
+由瑞利商性质，最小值等于 \( Q \) 的最小特征值（上一题已证）：
+\[
+\boxed{\min_{x \neq 0} \frac{x^\top Qx}{x^\top x} = \lambda_{\min}(Q) = 2}.
+\]
+当 \( x \) 为 \( Q \) 对应特征值 2 的特征向量时，等号成立。
 
-\paragraph{Part (d)}  
-Hessian矩阵 \( \nabla^2 f = 2Q \)，其特征值比为 \( 4:2 \)，条件数 \( \kappa = 2 \)。
+\paragraph{Part (c)：}  
+\( f(x) = 1 \) 对应标准型：
+\[
+4y_1^2 + 4y_2^2 + 2y_3^2 = 1 \implies \frac{y_1^2}{(1/2)^2} + \frac{y_2^2}{(1/2)^2} + \frac{y_3^2}{(1/\sqrt{2})^2} = 1.
+\]
+椭球的半轴长度为 \( a = 1/2 \), \( b = 1/2 \), \( c = 1/\sqrt{2} \)。长轴为 \( c \)，短轴为 \( a \)，其比为：
+\[
+\boxed{\frac{c}{a} = \frac{1/\sqrt{2}}{1/2} = \sqrt{2}}.
+\]
+
+\paragraph{Part (d)：}  
+Hessian 矩阵为 \( \nabla^2 f(x) = 2Q \)，其特征值为 \( 8, 8, 4 \)。条件数为最大特征值与最小特征值之比：
+\[
+\boxed{\kappa(\nabla^2 f(x)) = \frac{8}{4} = 2}.
+\]
+

@@ -1,0 +1,61 @@
+
+\[
+\ell(\mathbf{x}) = \text{tr}\left( (A - \mathbf{x}\mathbf{x}^T)^T (A - \mathbf{x}\mathbf{x}^T) \right).
+\]
+展开后得到：
+\[
+\ell(\mathbf{x}) = \text{tr}(A^TA) - 2\text{tr}(A\mathbf{x}\mathbf{x}^T) + \text{tr}(\mathbf{x}\mathbf{x}^T\mathbf{x}\mathbf{x}^T).
+\]
+
+\paragraph{第一项 \(\text{tr}(A^TA)\)}  
+
+\[
+d\,\text{tr}(A^TA) = 0.
+\]
+
+\paragraph{第二项 \(-2\text{tr}(A\mathbf{x}\mathbf{x}^T)\)}  
+
+\[
+d\,\text{tr}(A\mathbf{x}\mathbf{x}^T) = \text{tr}(A(d\mathbf{x})\mathbf{x}^T + A\mathbf{x}(d\mathbf{x}^T)).
+\]
+
+\[
+d\,\text{tr}(A\mathbf{x}\mathbf{x}^T) = 2\text{tr}(A\mathbf{x}d\mathbf{x}^T).
+\]
+
+\[
+d\left(-2\text{tr}(A\mathbf{x}\mathbf{x}^T)\right) = -4\text{tr}(A\mathbf{x}d\mathbf{x}^T).
+\]
+
+\paragraph{第三项 \(\text{tr}(\mathbf{x}\mathbf{x}^T\mathbf{x}\mathbf{x}^T)\)}  
+
+\[
+\text{tr}(\mathbf{x}\mathbf{x}^T\mathbf{x}\mathbf{x}^T) = (\mathbf{x}^T\mathbf{x})^2 = \|\mathbf{x}\|^4.
+\]
+对 \(\|\mathbf{x}\|^4\) 求微分：
+\[
+d\left(\|\mathbf{x}\|^4\right) = 4\|\mathbf{x}\|^2 \mathbf{x}^T d\mathbf{x}.
+\]
+
+
+\[
+d\ell = -4\text{tr}(A\mathbf{x}d\mathbf{x}^T) + 4\|\mathbf{x}\|^2 \mathbf{x}^T d\mathbf{x}.
+\]
+
+\[
+d\ell = \left(-4A\mathbf{x} + 4\|\mathbf{x}\|^2 \mathbf{x}\right)^T d\mathbf{x}.
+\]
+
+\[
+\nabla \ell(\mathbf{x}) = -4A\mathbf{x} + 4\|\mathbf{x}\|^2 \mathbf{x}.
+\]
+
+\[
+\nabla \ell(\mathbf{x}) = 4\left(\|\mathbf{x}\|^2 \mathbf{x} - A\mathbf{x}\right).
+\]
+
+
+梯度向量为：
+\[
+\boxed{\nabla \ell(\mathbf{x}) = 4\left( \|\mathbf{x}\|^2 \mathbf{x} - A\mathbf{x} \right)}.
+\]

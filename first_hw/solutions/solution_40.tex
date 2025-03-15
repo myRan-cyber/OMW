@@ -1,0 +1,37 @@
+ \( J(\mu, \Sigma) \) 等价于二次型 \( f(x) \) 在正态分布下的期望：
+\[
+J(\mu, \Sigma) = \mathbb{E}_{x \sim \mathcal{N}(\mu, \Sigma)} \left[ x^\top Q x \right].
+\]
+ 
+\[
+x^\top Q x = \text{tr}(x^\top Q x) = \text{tr}(Q x x^\top).
+\]
+
+\[
+\mathbb{E}[x^\top Q x] = \text{tr}\left( Q \cdot \mathbb{E}[x x^\top] \right).
+\]
+  
+对于 \( x \sim \mathcal{N}(\mu, \Sigma) \)，其二阶矩为：
+\[
+\mathbb{E}[x x^\top] = \Sigma + \mu \mu^\top.
+\]
+
+\[
+\mathbb{E}[x^\top Q x] = \text{tr}\left( Q (\Sigma + \mu \mu^\top) \right).
+\]
+
+
+
+\[
+\text{tr}\left( Q (\Sigma + \mu \mu^\top) \right) = \text{tr}(Q \Sigma) + \text{tr}(Q \mu \mu^\top).
+\]
+
+\[
+\text{tr}(Q \mu \mu^\top) = \text{tr}(\mu^\top Q \mu) = \mu^\top Q \mu.
+\]
+
+ 
+\[
+\boxed{J(\mu, \Sigma) = \mu^\top Q \mu + \text{tr}(Q \Sigma)}.
+\]
+

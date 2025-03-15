@@ -1,0 +1,50 @@
+对 \( x_j \) 求偏导数：
+\[
+\frac{\partial f}{\partial x_j} = \frac{\exp x_j}{\sum_{i=1}^n \exp x_i}.
+\]
+令 \( S = \sum_{i=1}^n \exp x_i \)，则梯度向量为：
+\[
+\nabla f(x) = \left( \frac{\exp x_1}{S}, \frac{\exp x_2}{S}, \dots, \frac{\exp x_n}{S} \right)^T.
+\]
+
+\paragraph{对角元素（\( i = j \)）}
+\[
+\frac{\partial^2 f}{\partial x_j^2} = \frac{\exp x_j (S - \exp x_j)}{S^2}.
+\]
+
+\paragraph{非对角元素（\( i \neq j \)）}
+\[
+\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{-\exp x_i \exp x_j}{S^2}.
+\]
+
+因此，Hessian 矩阵为：
+\[
+H = \begin{pmatrix}
+\frac{\exp x_1(S - \exp x_1)}{S^2} & \frac{-\exp x_1 \exp x_2}{S^2} & \cdots & \frac{-\exp x_1 \exp x_n}{S^2} \\
+\frac{-\exp x_2 \exp x_1}{S^2} & \frac{\exp x_2(S - \exp x_2)}{S^2} & \cdots & \frac{-\exp x_2 \exp x_n}{S^2} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{-\exp x_n \exp x_1}{S^2} & \frac{-\exp x_n \exp x_2}{S^2} & \cdots & \frac{\exp x_n(S - \exp x_n)}{S^2}
+\end{pmatrix}.
+\]
+
+对任意非零向量 \( z = (z_1, z_2, \dots, z_n)^T \)，计算二次型：
+\[
+z^T H z = \sum_{i=1}^n \frac{\exp x_i (S - \exp x_i)}{S^2} z_i^2 + \sum_{i \neq j} \frac{-\exp x_i \exp x_j}{S^2} z_i z_j.
+\]
+
+\[
+= \frac{1}{S^2} \left( S \sum_{i=1}^n \exp x_i z_i^2 - \sum_{i=1}^n (\exp x_i z_i)^2 - \sum_{i \neq j} \exp x_i \exp x_j z_i z_j \right).
+\]
+
+\[
+= \frac{1}{S^2} \left( S \sum_{i=1}^n \exp x_i z_i^2 - \left( \sum_{i=1}^n \exp x_i z_i \right)^2 \right).
+\]
+令 \( p_i = \frac{\exp x_i}{S} \)，则：
+\[
+z^T H z = \frac{1}{S} \left( \sum_{i=1}^n p_i z_i^2 - \left( \sum_{i=1}^n p_i z_i \right)^2 \right).
+\]
+上式等价于概率分布 \( p_i \) 下 \( z \) 的方差，故：
+\[
+z^T H z \geq 0.
+\]
+当且仅当 \( z \) 为常数向量时，方差为零，因此 \boxed{H \text{ 是半正定矩阵}}。

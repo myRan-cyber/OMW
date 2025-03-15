@@ -1,15 +1,30 @@
-\paragraph{Part (a)}  
-展开迹函数：
+\paragraph{Part (a)：逐分量梯度计算}  
 \[
-f(x) = \sigma^2 n + \sum_{i=1}^n x_i^2
-\]
-对 \(x_k\) 求导：
-\[
-\frac{\partial f}{\partial x_k} = 2x_k
+f(\bm{x}) = \text{tr}(\sigma^2 I) + \text{tr}(\bm{x}\bm{x}^\top).
 \]
 
-\paragraph{Part (b)}  
-整体梯度：
 \[
-\frac{\partial f}{\partial x} = 2x
+f(\bm{x}) = n\sigma^2 + \sum_{i=1}^n x_i^2.
+\]
+对 \( x_k \) 求偏导：
+\[
+\frac{\partial f}{\partial x_k} = \frac{\partial}{\partial x_k} \left( n\sigma^2 + \sum_{i=1}^n x_i^2 \right) = 2x_k.
+\]
+得：
+\[
+\boxed{\nabla f(\bm{x}) = \left( 2x_1, 2x_2, \dots, 2x_n \right)^\top}.
+\]
+
+\paragraph{Part (b)：整体梯度计算}  
+对 \( f(\bm{x}) = \text{tr}(\sigma^2 I + \bm{x}\bm{x}^\top) \) 求微分：
+\[
+df = \text{tr}(d(\bm{x}\bm{x}^\top)) = \text{tr}(d\bm{x} \cdot \bm{x}^\top + \bm{x} \cdot d\bm{x}^\top).
+\]
+
+\[
+df = 2\text{tr}(\bm{x}^\top d\bm{x}) = 2\bm{x}^\top d\bm{x}.
+\]
+
+\[
+\boxed{\nabla f(\bm{x}) = 2\bm{x}}.
 \]

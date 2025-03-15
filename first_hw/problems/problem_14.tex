@@ -1,8 +1,11 @@
-\begin{example}[迹函数梯度]
-    设 \(f(x) = \text{tr}(\sigma^2 I + xx^T)\)，计算梯度：  
-    a. 逐分量计算 \(\frac{\partial f}{\partial x_k}\)  
-    b. 整体计算 \(\frac{\partial f}{\partial x}\)
-    \end{example}
+\begin{example}
+    设 \( f(\bm{x}) = \text{tr}(\sigma^2 I + \bm{x}\bm{x}^\top) \)，其中 \(\sigma > 0\)，\( I \) 为 \( n \times n \) 单位矩阵，\( \bm{x} \in \mathbb{R}^n \)。
+
+    a. 使用逐分量计算梯度方式计算 \(\frac{\partial f}{\partial x_k}\)；
     
-    \subsection*{解答过程}
+    b. 使用整体的方法计算梯度 \(\frac{\partial f}{\partial \bm{x}}\)。
+    \end{example}
+
+    \subsection*{Ans.}
+
     \input{solutions/solution_14}

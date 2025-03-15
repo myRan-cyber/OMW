@@ -1,12 +1,37 @@
-\paragraph{Part (a)}  
-由谱定理，存在正交矩阵 \(U\) 使得 \(Q = U\Lambda U^T\)。令 \(y = U^T x\)，则：
+\paragraph{Part (a)}    
+令 \( y = U^\top x \)，则 \( x = Uy \)，
 \[
-x^T Qx = y^T \Lambda y = \sum_{i=1}^n \lambda_i y_i^2 \leq \lambda_1 \|y\|^2 = \lambda_1 \|x\|^2
+x^\top Qx = y^\top U^\top Q U y = y^\top \Lambda y = \sum_{i=1}^n \lambda_i y_i^2.
 \]
-当 \(y = e_1\) 时取等，故 \(\lambda_1 = \max_{\|x\|=1} x^T Qx\)。
+  
+当 \( \|x\| = 1 \) 时，\( \|y\| = 1 \)，即 \( \sum_{i=1}^n y_i^2 = 1 \)
+\[
+x^\top Qx = \sum_{i=1}^n \lambda_i y_i^2 \leq \lambda_1 \sum_{i=1}^n y_i^2 = \lambda_1.
+\]
+当 \( y_1 = 1 \)，其余 \( y_i = 0 \) 时，等号成立，故：
+\[
+\max_{\|x\|=1} x^\top Qx = \lambda_1.
+\]
 
-\paragraph{Part (b)}  
-由 \(y^T \Lambda y \geq \lambda_n \|y\|^2\) 且 \(\|y\| = \|x\|\)，得：
+ 
+对任意 \( x \neq 0 \)，
 \[
-\lambda_n \|x\|^2 \leq x^T Qx \leq \lambda_1 \|x\|^2
+\frac{x^\top Qx}{x^\top x} = \frac{\sum_{i=1}^n \lambda_i y_i^2}{\sum_{i=1}^n y_i^2} \leq \lambda_1.
 \]
+当 \( y_1 \neq 0 \)，其余 \( y_i = 0 \) 时，等号成立，故：
+\[
+\max_{x \neq 0} \frac{x^\top Qx}{x^\top x} = \lambda_1.
+\]
+
+\paragraph{Part (b)}   
+由 \( \lambda_n \leq \lambda_i \leq \lambda_1 \)，对任意 \( y \in \mathbb{R}^n \)，有：
+\[
+\lambda_n \sum_{i=1}^n y_i^2 \leq \sum_{i=1}^n \lambda_i y_i^2 \leq \lambda_1 \sum_{i=1}^n y_i^2.
+\]
+
+ 
+由于 \( \sum_{i=1}^n y_i^2 = \|x\|^2 \)，代入得：
+\[
+\lambda_n \|x\|^2 \leq x^\top Qx \leq \lambda_1 \|x\|^2.
+\]
+当 \( x \) 分别为 \( Q \) 的最小和最大特征值对应的特征向量时，等号成立。
